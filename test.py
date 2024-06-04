@@ -2,7 +2,7 @@ import os
 import json
 
 
-secret = os.getenv("TEST_SECRET") + " TEST"
+secret = os.getenv("TEST_SECRET")
 print(type(secret))
 print(secret)
 
