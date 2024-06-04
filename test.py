@@ -6,7 +6,7 @@ secret = os.getenv("TEST_SECRET")
 print(type(secret))
 print(secret)
 
-infos = json.loads("'{}'".format(secret))
+infos = json.loads(secret)
 print(type(infos))
 print(infos)
 
