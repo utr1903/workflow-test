@@ -2,7 +2,8 @@ import os
 import json
 
 
-infos = json.loads(json.loads(os.getenv("TEST_SECRET")))
+# infos = json.loads(json.loads(os.getenv("TEST_SECRET")))
+infos = json.loads(os.getenv("TEST_SECRET"))
 print(type(infos))
 print(infos)
 
