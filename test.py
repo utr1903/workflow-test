@@ -2,11 +2,11 @@ import os
 import json
 
 
-secret = os.getenv("TEST_SECRET")
+secret = os.getenv("TEST_SECRET") + " TEST"
 print(type(secret))
 print(secret)
 
-infos = json.loads(secret)
+infos = json.loads("{}".format(secret))
 print(type(infos))
 print(infos)
 
