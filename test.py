@@ -4,9 +4,15 @@ import json
 try:
     secret = os.getenv("TEST_SECRET")
     print(type(secret))
+    print(secret)
 
-    # infos = accounts = json.loads(secret)
-    infos = accounts = json.loads("[{\"organizationName\":\"MY ORG\",\"accountId\":\"123\",\"accountApiKey\":\"XXX\",\"accountRegion\":\"AA\"}]")
+    infos = accounts = json.loads("'{}'".format(secret))
+    print(type(infos))
+    print(infos)
+
+    infos = accounts = json.loads(
+        '[{"organizationName":"MY ORG","accountId":"123","accountApiKey":"XXX","accountRegion":"AA"}]'
+    )
     print(type(infos))
     print(infos)
 
