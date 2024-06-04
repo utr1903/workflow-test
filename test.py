@@ -2,12 +2,18 @@ import os
 import json
 
 try:
-    infos = accounts = json.loads(os.getenv("TEST_SECRET"))
+    secret = os.getenv("TEST_SECRET")
+    print(type(secret))
+
+    infos = accounts = json.loads(secret)
+    print(type(infos))
     print(infos)
-    
-    for info in infos:
-      print(info)
-      print(info["organizationName"])
-        
+
+    for key, value in infos.items():
+        print(type(key))
+        print(key)
+        print(type(value))
+        print(value)
+
 except Exception as e:
     print(e)
