@@ -5,7 +5,8 @@ try:
     secret = os.getenv("TEST_SECRET")
     print(type(secret))
 
-    infos = accounts = json.loads(secret)
+    # infos = accounts = json.loads(secret)
+    infos = accounts = json.loads("[{\"organizationName\":\"MY ORG\",\"accountId\":\"123\",\"accountApiKey\":\"XXX\",\"accountRegion\":\"AA\"}]")
     print(type(infos))
     print(infos)
 
