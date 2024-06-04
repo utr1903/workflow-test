@@ -10,14 +10,9 @@ infos = json.loads(secret)
 print(type(infos))
 print(infos)
 
-infos = json.loads(
-    '[{"organizationName":"MY ORG","accountId":"123","accountApiKey":"XXX","accountRegion":"AA"}]'
-)
-print(type(infos))
-print(infos)
+for info in infos:
+    print(type(info))
+    print(info)
 
-for key, value in infos.items():
-    print(type(key))
-    print(key)
-    print(type(value))
-    print(value)
+    x = info["organizationName"]
+    print(x)
